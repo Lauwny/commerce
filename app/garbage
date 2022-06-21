@@ -1,0 +1,18 @@
+  "label" => [
+                "required" => "label is required"
+            ],
+            "description" => [
+                "required" => "description is required"
+            ],
+            "icon" => [
+                "required" => "icon is required"
+            ],
+            "source" => [
+                "required" => "source is required"
+            ],
+            "image" => [
+                "required" => "image is required"
+            ],
+            "userToken" => [
+                "required" => "userToken is required"
+            ],

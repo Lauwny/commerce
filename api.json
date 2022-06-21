@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "23f74252-dd81-482e-b24d-8313cf34fdf9",
+		"name": "disaster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userToken\" : \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaGVfY2xhaW0iLCJhdWQiOiJUaGVfQXVkIiwiaWF0IjoxNjQwNTUwMTA1LCJuYmYiOjE2NDA1NTAxMTUsImV4cCI6MTY0MDU1MzcwNSwiZGF0YSI6WyIzIiwibGF1bnkiLCIxIl19.ixGYesLz6mKyZZcEtpbxB8lAJg4ilJ2a7xMngiflXyw\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "test_token",
+					"host": [
+						"test_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add point",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userToken\" : \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJUaGVfY2xhaW0iLCJhdWQiOiJUaGVfQXVkIiwiaWF0IjoxNjQwNTU0MjY1LCJuYmYiOjE2NDA1NTQyNzUsImV4cCI6MTY0MDU1Nzg2NSwiZGF0YSI6WyIzIiwibGF1bnkiLCIxIl19.JTP4eOa-k5h2mnEQpNRiqzVjMRZBf5pjXWWLLgeTcAY\",\n    \"points\" : {\n    \"type\": \"Feature\",\n    \"properties\": {\n        \"name\": \"Coors Field\",\n        \"amenity\": \"Baseball Stadium\",\n        \"popupContent\": \"This is where the Rockies play!\"\n    },\n    \"geometry\": {\n        \"type\": \"Point\",\n        \"coordinates\": [-104.99404, 39.75621]\n    }\n },\n    \"label\" : \"mon test point\",\n    \"description\" : \"une belle description\",\n    \"color\" : \"blue\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/area",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"area"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all areas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "get one area",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "add event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "get all events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "get one event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
