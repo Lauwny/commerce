@@ -1,0 +1,412 @@
+CRITICAL - 2023-12-11 12:15:02 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-11 12:16:44 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:18:02 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:18:03 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:18:23 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:18:24 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:19:22 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:19:23 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:19:29 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:19:30 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:19:30 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:20:24 --> Call to undefined method App\Controllers\UserController::logger()
+in APPPATH\Controllers\UserController.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 12:22:13 --> UserController initialized
+INFO - 2023-12-11 12:22:29 --> UserController initialized
+INFO - 2023-12-11 12:27:39 --> UserController initialized
+CRITICAL - 2023-12-11 12:27:39 --> Class "CodeIgniter\Database\PDO\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('PDO', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\UserController.php(14): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 12:28:15 --> UserController initialized
+CRITICAL - 2023-12-11 12:28:15 --> Class "CodeIgniter\Database\Mysql\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('Mysql', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\UserController.php(14): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(914): App\Controllers\UserController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 12:28:21 --> UserController initialized
+CRITICAL - 2023-12-11 12:35:34 --> Array to string conversion
+in APPPATH\Controllers\AuthController.php on line 12.
+ 1 APPPATH\Controllers\AuthController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 12:35:56 --> Array to string conversion
+in APPPATH\Controllers\AuthController.php on line 12.
+ 1 APPPATH\Controllers\AuthController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 12:56:04 --> AuthController initialized
+INFO - 2023-12-11 12:56:04 --> type USERNAME
+CRITICAL - 2023-12-11 12:56:04 --> Undefined property: App\Controllers\AuthController::$utilisateurModel
+in APPPATH\Controllers\AuthController.php on line 31.
+ 1 APPPATH\Controllers\AuthController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AuthController::$utilisateurModel', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 13:17:54 --> AuthController initialized
+INFO - 2023-12-11 13:17:54 --> type USERNAME
+CRITICAL - 2023-12-11 13:17:54 --> Attempt to read property "login" on null
+in APPPATH\Controllers\AuthController.php on line 45.
+ 1 APPPATH\Controllers\AuthController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "login" on null', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 13:18:47 --> AuthController initialized
+INFO - 2023-12-11 13:18:47 --> type USERNAME
+CRITICAL - 2023-12-11 13:18:47 --> Attempt to read property "login" on null
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 APPPATH\Controllers\AuthController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "login" on null', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 13:18:59 --> AuthController initialized
+INFO - 2023-12-11 13:18:59 --> type USERNAME
+CRITICAL - 2023-12-11 13:18:59 --> Attempt to read property "login" on null
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 APPPATH\Controllers\AuthController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "login" on null', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 13:19:09 --> AuthController initialized
+INFO - 2023-12-11 13:19:09 --> type USERNAME
+CRITICAL - 2023-12-11 13:19:10 --> Attempt to read property "login" on null
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 APPPATH\Controllers\AuthController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "login" on null', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\AuthController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 13:19:35 --> AuthController initialized
+INFO - 2023-12-11 13:19:35 --> type USERNAME
+INFO - 2023-12-11 13:20:04 --> AuthController initialized
+INFO - 2023-12-11 13:20:04 --> type USERNAME
+INFO - 2023-12-11 13:20:17 --> AuthController initialized
+INFO - 2023-12-11 13:20:17 --> type USERNAME
+ERROR - 2023-12-11 13:20:17 --> user launy not found and failed to loggin
+INFO - 2023-12-11 13:21:31 --> AuthController initialized
+INFO - 2023-12-11 13:21:31 --> type USERNAME
+ERROR - 2023-12-11 13:21:31 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:21:34 --> AuthController initialized
+INFO - 2023-12-11 13:21:34 --> type USERNAME
+ERROR - 2023-12-11 13:21:34 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:21:40 --> AuthController initialized
+INFO - 2023-12-11 13:21:40 --> type USERNAME
+ERROR - 2023-12-11 13:21:40 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:21:53 --> AuthController initialized
+INFO - 2023-12-11 13:21:53 --> type USERNAME
+ERROR - 2023-12-11 13:21:53 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:22:37 --> AuthController initialized
+INFO - 2023-12-11 13:22:37 --> type USERNAME
+ERROR - 2023-12-11 13:22:37 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:22:53 --> AuthController initialized
+INFO - 2023-12-11 13:22:53 --> type USERNAME
+ERROR - 2023-12-11 13:22:53 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:23:36 --> AuthController initialized
+INFO - 2023-12-11 13:23:36 --> type USERNAME
+ERROR - 2023-12-11 13:23:36 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:25:11 --> AuthController initialized
+INFO - 2023-12-11 13:25:11 --> type USERNAME
+ERROR - 2023-12-11 13:25:11 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:25:25 --> AuthController initialized
+INFO - 2023-12-11 13:25:25 --> type USERNAME
+ERROR - 2023-12-11 13:25:25 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:25:51 --> AuthController initialized
+INFO - 2023-12-11 13:25:51 --> type USERNAME
+ERROR - 2023-12-11 13:25:51 --> user user1 not found and failed to loggin
+CRITICAL - 2023-12-11 13:32:49 --> Maximum execution time of 60 seconds exceeded
+in APPPATH\Controllers\AuthController.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-11 13:36:41 --> Maximum execution time of 60 seconds exceeded
+in APPPATH\Controllers\AuthController.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-12-11 13:36:41 --> AuthController initialized
+INFO - 2023-12-11 13:36:41 --> type USERNAME
+ERROR - 2023-12-11 13:36:41 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:36:41 --> AuthController initialized
+INFO - 2023-12-11 13:36:41 --> type USERNAME
+ERROR - 2023-12-11 13:36:41 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 13:36:41 --> AuthController initialized
+INFO - 2023-12-11 13:36:41 --> type USERNAME
+ERROR - 2023-12-11 13:36:41 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:06:36 --> AuthController initialized
+INFO - 2023-12-11 14:06:36 --> type USERNAME
+ERROR - 2023-12-11 14:06:36 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:20:00 --> AuthController initialized
+INFO - 2023-12-11 14:20:00 --> type USERNAME
+ERROR - 2023-12-11 14:20:00 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:21:31 --> AuthController initialized
+INFO - 2023-12-11 14:21:31 --> type USERNAME
+ERROR - 2023-12-11 14:21:31 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:21:55 --> AuthController initialized
+INFO - 2023-12-11 14:21:55 --> type USERNAME
+ERROR - 2023-12-11 14:21:55 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:24:51 --> AuthController initialized
+INFO - 2023-12-11 14:24:51 --> type USERNAME
+INFO - 2023-12-11 14:24:51 --> user user1 found and logedin
+INFO - 2023-12-11 14:25:00 --> AuthController initialized
+INFO - 2023-12-11 14:25:00 --> type USERNAME
+ERROR - 2023-12-11 14:25:00 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:25:09 --> AuthController initialized
+INFO - 2023-12-11 14:25:09 --> type USERNAME
+ERROR - 2023-12-11 14:25:09 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:25:32 --> AuthController initialized
+INFO - 2023-12-11 14:25:32 --> type USERNAME
+CRITICAL - 2023-12-11 14:25:32 --> 1
+in APPPATH\Controllers\AuthController.php on line 46.
+ 1 APPPATH\Controllers\AuthController.php(46): assert(false, '1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 14:25:43 --> AuthController initialized
+INFO - 2023-12-11 14:25:43 --> type USERNAME
+ERROR - 2023-12-11 14:25:43 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:25:57 --> AuthController initialized
+INFO - 2023-12-11 14:25:57 --> type USERNAME
+ERROR - 2023-12-11 14:25:57 --> user user1 not found and failed to loggin
+INFO - 2023-12-11 14:26:57 --> AuthController initialized
+INFO - 2023-12-11 14:26:57 --> type USERNAME
+INFO - 2023-12-11 14:26:57 --> user user1 found and logedin
+INFO - 2023-12-11 14:36:07 --> UserController initialized
+INFO - 2023-12-11 14:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 14:36:19 --> App\Controllers\Home::index(): Return value must be of type string, none returned
+in APPPATH\Controllers\Home.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 14:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:37:07 --> AuthController initialized
+INFO - 2023-12-11 14:37:07 --> type USERNAME
+INFO - 2023-12-11 14:37:07 --> user user1 found and loged in
+INFO - 2023-12-11 14:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-12-11 14:37:07 --> Session: Sessions is enabled, and one exists. Please don't $session->start();
+INFO - 2023-12-11 14:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:37:35 --> AuthController initialized
+INFO - 2023-12-11 14:37:35 --> type USERNAME
+INFO - 2023-12-11 14:37:35 --> user user1 found and loged in
+INFO - 2023-12-11 14:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+
+
+
+
+
+INFO - 2023-12-11 14:37:43 --> AuthController initialized
+INFO - 2023-12-11 14:37:43 --> type USERNAME
+INFO - 2023-12-11 14:37:43 --> user user1 found and loged in
+INFO - 2023-12-11 14:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:37:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:40:27 --> AuthController initialized
+INFO - 2023-12-11 14:40:27 --> type USERNAME
+INFO - 2023-12-11 14:40:27 --> user user1 found and loged in
+INFO - 2023-12-11 14:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:40:27 --> AuthController initialized
+INFO - 2023-12-11 14:40:27 --> type USERNAME
+INFO - 2023-12-11 14:40:27 --> user user1 found and loged in
+INFO - 2023-12-11 14:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:44:20 --> AuthController initialized
+INFO - 2023-12-11 14:44:20 --> type USERNAME
+INFO - 2023-12-11 14:44:20 --> user user1 found and loged in
+INFO - 2023-12-11 14:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:44:20 --> session created with s_id 8hp9ltbpfven745rk28r407g6ceslrk9
+INFO - 2023-12-11 14:44:28 --> AuthController initialized
+INFO - 2023-12-11 14:44:28 --> type USERNAME
+INFO - 2023-12-11 14:44:28 --> user user1 found and loged in
+INFO - 2023-12-11 14:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:44:28 --> session created with s_id 8hp9ltbpfven745rk28r407g6ceslrk9
+INFO - 2023-12-11 14:44:29 --> AuthController initialized
+INFO - 2023-12-11 14:44:29 --> type USERNAME
+INFO - 2023-12-11 14:44:29 --> user user1 found and loged in
+INFO - 2023-12-11 14:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:44:29 --> session created with s_id 8hp9ltbpfven745rk28r407g6ceslrk9
+INFO - 2023-12-11 14:44:29 --> AuthController initialized
+INFO - 2023-12-11 14:44:29 --> type USERNAME
+INFO - 2023-12-11 14:44:29 --> user user1 found and loged in
+INFO - 2023-12-11 14:44:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:44:30 --> session created with s_id 8hp9ltbpfven745rk28r407g6ceslrk9
+INFO - 2023-12-11 14:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 14:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 15:04:53 --> Array to string conversion
+in APPPATH\Controllers\Home.php on line 10.
+ 1 APPPATH\Controllers\Home.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\Home.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 15:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:07:54 --> AuthController initialized
+INFO - 2023-12-11 15:07:54 --> type USERNAME
+ERROR - 2023-12-11 15:07:54 --> user hello failed to login
+INFO - 2023-12-11 15:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:08:09 --> AuthController initialized
+INFO - 2023-12-11 15:08:09 --> type USERNAME
+INFO - 2023-12-11 15:08:09 --> user user1 found and loged in
+INFO - 2023-12-11 15:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:08:09 --> session created with s_id 2c1anqbhon7kfm7i4p2bnqnbsags9t13
+INFO - 2023-12-11 15:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 15:11:58 --> syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+in APPPATH\Controllers\Home.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(900): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 15:16:17 --> Undefined variable $csrf
+in APPPATH\Controllers\Home.php on line 11.
+ 1 APPPATH\Controllers\Home.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $csrf', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\Home.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 15:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 15:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 16:38:28 --> Class "App\Controllers\ValidationConfig" not found
+in APPPATH\Controllers\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+WARNING - 2023-12-11 16:40:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$validation is deprecated in APPPATH\Controllers\BaseController.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 16:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 16:42:48 --> Undefined property: App\Controllers\Home::$validation
+in APPPATH\Controllers\BaseController.php on line 66.
+ 1 APPPATH\Controllers\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$validation', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\BaseController.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+CRITICAL - 2023-12-11 16:43:28 --> Undefined property: App\Controllers\Home::$validation
+in APPPATH\Controllers\BaseController.php on line 66.
+ 1 APPPATH\Controllers\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Home::$validation', 'C:\\Apache24\\htdocs\\commerce\\app\\Controllers\\BaseController.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
+INFO - 2023-12-11 16:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-11 16:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 16:44:30 --> Call to undefined method App\Controllers\Home::validation()
+in APPPATH\Controllers\Home.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(80): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Apache24\\htdocs\\commerce\\public\\index.php')
