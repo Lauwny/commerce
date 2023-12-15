@@ -2,12 +2,19 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
-use App\Models\UtilisateurModel;
+use Helpers\JWTHandler\JwtHandler;
 
-class AuthController extends BaseController
+use App\Models\UtilisateurModel;
+use Helpers\RestResponse\RestResponse;
+
+use CodeIgniter\RESTful\ResourceController;
+
+class AuthController extends ResourceController
 {
     public $userModel;
+    protected $selfresponse;
+
+    protected $token;
 
     private $options = [
         'cost' => 1,
@@ -20,7 +27,6 @@ class AuthController extends BaseController
         $this->userModel = new UtilisateurModel();
 
         $userloginType = "login";
-
         $userlogin = $this->request->getPost('username');
         $userpassword = $this->request->getPost('password');
 
@@ -37,31 +43,50 @@ class AuthController extends BaseController
             $user = $this->userModel->where('login', $userlogin)->first();
         }
 
-        // Verify password
-        if ($user && $userpassword == $user->password) {
-            $session = session();
-            $session->set('userId', $user->id);
-            $session->set('loggedIn', true);
-            $this->logger("info", "session created with s_id ".session_id()." for user $userlogin");
-            return redirect()->to('/testlog');
+        if ($user) {
+            $this->logger("info", "user : " . json_encode($user));
+            if ($userpassword == $user->password) {
+                $this->logger("info", "auth for user $userlogin");
+                $this->userModel->setLastLoginDate($user->id, ['lastLogin' => date("Y-m-d H:i:s")]);
+                $jwtHandler = new JwtHandler();
+                $this->token = $jwtHandler->generateToken(
+                    [
+                        "userId" => $user->id,
+                        "teethtype" => "simple"
+                    ]
+                );
+
+                $restResponse = new RestResponse(["code" => "auth_success", "message" => "Authentication successful", "data" => ["jwt_token" => $this->token]]);
+                return $this->respond(json_decode($restResponse->build()), 200);
+            } else {
+                $this->logger("error", "user $user->login failed to login");
+                $restResponse = new RestResponse(["code" => "wrong_pwd_uname", "message" => "Wrong password or username", "data" => ""]);
+                return $this->respond(json_decode($restResponse->build()), 401);
+            }
         } else {
-            $this->logger("error", "user $userlogin failed to login");
-            return redirect()->to('/testlog');
+            $restResponse = new RestResponse(["code" => "user_not_found", "message" => "User not found", "data" => ""]);
+            return $this->respond(json_decode($restResponse->build()), 404);
         }
     }
 
-
     public function logout()
     {
-        $session = session();
-        // Check if the user is logged in
-        if ($session->get('loggedIn') !== null) {
-            // Destroy the session
-            $session->destroy();
-            // Redirect or display a message as needed
-            return redirect()->to('/testlog');
+        $requestData = $this->request->getJSON();
+        $token = $requestData->token;
+
+        if (!$token) {
+            $restResponse = new RestResponse(["code" => "token_not_provided", "message" => "Token not provided", "data" => ""]);
+            return $this->respond(json_decode($restResponse->build()), 400);
+        }
+
+        $jwtHandler = new JwtHandler();
+
+        if ($jwtHandler->validateToken($token)) {
+            $restResponse = new RestResponse(["code" => "logout_success", "message" => "Logout successful", "data" => ""]);
+            return $this->respond(json_decode($restResponse->build()), 200);
         } else {
-            echo "No active session";
+            $restResponse = new RestResponse(["code" => "invalid_token", "message" => "Invalid token", "data" => ""]);
+            return $this->respond(json_decode($restResponse->build()), 401);
         }
     }
 }

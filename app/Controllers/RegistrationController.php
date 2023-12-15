@@ -45,14 +45,16 @@ class RegistrationController extends BaseController
                     'mail' => $mail,
                     'createdAt' => date('Y-m-d H:i:s'),
                 ];
-                $this->userModel->insert($userData);
+                $this->userModel->createNewUser($userData);
                 $lastUserId = $this->userModel->insertID();
 
                 $userFileDatas = [
+                    'idUser' => $lastUserId,
                     'name' => $name,
-                    'firstname' => $firstname
+                    'firstname' => $firstname,
+                    'createdAt' => date('Y-m-d H:i:s'),
                 ];
-                if(intval($this->createUserFile($lastUserId, $userFileDatas) > 0)){
+                if(intval($this->createUserFile($userFileDatas) > 0)){
                     session()->set('userId', $lastUserId);
                     session()->set('loggedIn', true);
                     return redirect()->to('/testlog');
@@ -61,13 +63,11 @@ class RegistrationController extends BaseController
         }
     }
 
-    public function createUserFile($lastUserId, $userDatas = [])
+    public function createUserFile($userDatas = [])
     {
         $this->logger("info", "RegistrationController::createUserFile initialized");
 
         $this->userProfileModel = new UserProfileModel();
-
-        $userDatas["idUser"] = $lastUserId;
 
         return $this->userProfileModel->createNewUserProfile($userDatas);
     }

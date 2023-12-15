@@ -18,5 +18,4 @@ class UserController extends BaseController
     {
         return view('welcome_message');
     }
-
 }

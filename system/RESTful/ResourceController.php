@@ -114,4 +114,11 @@ class ResourceController extends BaseResource
             $this->format = $format;
         }
     }
+
+    protected function logger($level, $message)
+    {
+        // Your logging logic here
+        // For example, you might use CodeIgniter's logging service
+        log_message($level, $message);
+    }
 }
