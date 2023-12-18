@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\UserProfileModel;
 use App\Models\UtilisateurModel;
 use CodeIgniter\RESTful\ResourceController;
-use Helpers\JWTHandler\JwtHandler;
 use Helpers\RestResponse\RestResponse;
 
 class RegistrationController extends ResourceController

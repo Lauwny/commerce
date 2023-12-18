@@ -80,4 +80,14 @@ class JwtHandler
         $tokenModel = new TokenModel();
         return $tokenModel->where('tokenValue', $token)->first() !== null;
     }
+
+    /**
+     * Return the id based on the token if the id exist
+     *
+     * @param $token given user token
+     * @return int return the id if exist, else return 0
+     */
+    public function getUserId($token): int {
+        return $this->decodeToken($token)->userId ?? 0;
+    }
 }
