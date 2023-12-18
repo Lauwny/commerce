@@ -115,10 +115,42 @@ class ResourceController extends BaseResource
         }
     }
 
+    /**
+     * Logging Function
+     *
+     * @param $level
+     * @param $message
+     */
     protected function logger($level, $message)
     {
         // Your logging logic here
         // For example, you might use CodeIgniter's logging service
         log_message($level, $message);
+    }
+
+    function sanitizeJsonValues($jsonString)
+    {
+        // Decode the JSON string
+        $decodedJson = json_decode($jsonString, true);
+
+        // Sanitize the decoded JSON
+        $sanitizedJson = $this->recursiveSanitize($decodedJson);
+
+        // Encode the sanitized JSON back to string
+        return json_encode($sanitizedJson);
+    }
+
+    function recursiveSanitize($data)
+    {
+        if (is_array($data) || is_object($data)) {
+            foreach ($data as &$value) {
+                $value = $this->recursiveSanitize($value);
+            }
+        } elseif (is_string($data)) {
+            // Sanitize the string to prevent XSS attacks
+            $data = htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+        }
+
+        return $data;
     }
 }

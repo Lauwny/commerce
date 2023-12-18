@@ -1,8 +1,9 @@
 <?php
 namespace Helpers\JWTHandler;
 
+use App\Models\TokenModel;
 use Firebase\JWT\JWT;
-
+use Firebase\JWT\Key;
 
 class JwtHandler
 {
@@ -17,7 +18,7 @@ class JwtHandler
         $token = [
             "iat" => $issuedAt, // Timestamp de l'émission du token
             "exp" => $expire,   // Timestamp de l'expiration du token
-            "data" => $data     // Données que vous souhaitez inclure dans le token
+            "data" => $data     // Données à inclure dans le token
         ];
         log_message("info", "token : ".json_encode($token));
        return JWT::encode($token, $this->secretKey, 'HS256');
@@ -40,15 +41,43 @@ class JwtHandler
         try {
             $headers = 'HS256';
             $decoded = JWT::decode($token, new Key($this->secretKey, 'HS256'));
-            
+
             $currentTimestamp = time();
             if ($decoded->exp < $currentTimestamp) {
                 return false;
             }
-            
+
             return true;
         } catch (\Exception $e) {
             return false;
         }
+    }
+
+    public function revokeToken($userId, $tokenValue) {
+        $tokenModel = new TokenModel();
+        log_message("info", "JwtHandler::revokeToken init. With data: " . json_encode($tokenValue));
+
+        // Check if the token is not already revoked
+        if (!$this->isRevoked($tokenValue)) {
+            try {
+                log_message("info", "JwtHandler::revokeToken. Token revoked");
+                $tokenModel->insertRevokedToken($tokenValue, $userId);
+                log_message("info", "JwtHandler::revokeToken code: 1");
+                return 1; // Success
+            } catch (\ReflectionException $e) {
+                log_message("error", "JwtHandler::revokeToken  ReflectionException: $e");
+                log_message("info", "JwtHandler::revokeToken code: 2");
+                return 2; // Error
+            }
+        } else {
+            log_message("info", "JwtHandler::revokeToken. Token $tokenValue \n is already revoked");
+            log_message("info", "JwtHandler::revokeToken code: 3");
+            return 3; // Already revoked
+        }
+    }
+
+    public function isRevoked($token): bool {
+        $tokenModel = new TokenModel();
+        return $tokenModel->where('tokenValue', $token)->first() !== null;
     }
 }

@@ -44,15 +44,15 @@ BEGIN
     DECLARE attrCount INT;
 
     -- Vérifier si l'attribut avec le même nom existe déjà
-SELECT COUNT(*) INTO attrCount
-FROM attribute
-WHERE name = NEW.name;
+    SELECT COUNT(*) INTO attrCount
+    FROM attribute
+    WHERE name = NEW.name;
 
 -- Si l'attribut existe déjà, annuler l'insertion
-IF attrCount > 0 THEN
+    IF attrCount > 0 THEN
         SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Erreur : L''attribut avec le nom spécifié existe déjà.';
-END IF;
+            SET MESSAGE_TEXT = 'Erreur : L''attribut avec le nom spécifié existe déjà.';
+    END IF;
 END;
 
 create table categories
@@ -318,7 +318,7 @@ create table v_user_info
 create definer = root@localhost view produit as
 select `u`.`id` AS `user_id`, `u`.`login` AS `username`, `r`.`roleName` AS `role`
 from ((`commerce`.`utilisateur` `u` join `commerce`.`userrole` `ur`
-       on ((`u`.`id` = `ur`.`userId`))) join `commerce`.`role` `r` on ((`ur`.`roleId` = `r`.`id`)));
+    on ((`u`.`id` = `ur`.`userId`))) join `commerce`.`role` `r` on ((`ur`.`roleId` = `r`.`id`)));
 
 create definer = root@localhost view v_attributs_category as
 select `pf`.`id`         AS `id_product_file`,
@@ -327,9 +327,9 @@ select `pf`.`id`         AS `id_product_file`,
        `a`.`name`        AS `attribute_name`,
        `a`.`value`       AS `attribute_value`
 from (((`commerce`.`productfile` `pf` join `commerce`.`attributeproduct` `ap`
-        on ((`pf`.`id` = `ap`.`idProduct`))) join `commerce`.`attribute` `a`
-       on ((`ap`.`idAttribute` = `a`.`id`))) join `commerce`.`categoriesproduct` `cp`
-      on ((`pf`.`id` = `cp`.`idProduct`)));
+    on ((`pf`.`id` = `ap`.`idProduct`))) join `commerce`.`attribute` `a`
+    on ((`ap`.`idAttribute` = `a`.`id`))) join `commerce`.`categoriesproduct` `cp`
+                                               on ((`pf`.`id` = `cp`.`idProduct`)));
 
 create definer = root@localhost view vue_produit_info as
 select `p`.`id`           AS `id_produit`,
@@ -357,12 +357,12 @@ select `p`.`id`           AS `id_produit`,
        `cp`.`idCategory`  AS `idCategory`,
        `cp`.`idProduct`   AS `idProduct`
 from ((((((`commerce`.`product` `p` left join `commerce`.`productfile` `pf`
-           on ((`p`.`idProductFile` = `pf`.`id`))) left join `commerce`.`productimage` `pi`
-          on ((`p`.`id` = `pi`.`idProduct`))) left join `commerce`.`image` `i`
-         on ((`pi`.`idImage` = `i`.`id`))) left join `commerce`.`attributeproduct` `ap`
-        on ((`p`.`id` = `ap`.`idProduct`))) left join `commerce`.`attribute` `a`
-       on ((`ap`.`idAttribute` = `a`.`id`))) left join `commerce`.`categoriesproduct` `cp`
-      on ((`p`.`id` = `cp`.`idProduct`)));
+    on ((`p`.`idProductFile` = `pf`.`id`))) left join `commerce`.`productimage` `pi`
+    on ((`p`.`id` = `pi`.`idProduct`))) left join `commerce`.`image` `i`
+    on ((`pi`.`idImage` = `i`.`id`))) left join `commerce`.`attributeproduct` `ap`
+    on ((`p`.`id` = `ap`.`idProduct`))) left join `commerce`.`attribute` `a`
+    on ((`ap`.`idAttribute` = `a`.`id`))) left join `commerce`.`categoriesproduct` `cp`
+                                                    on ((`p`.`id` = `cp`.`idProduct`)));
 
 create definer = root@localhost view vue_utilisateur_info as
 select `u`.`id`              AS `id_utilisateur`,
@@ -381,6 +381,6 @@ select `u`.`id`              AS `id_utilisateur`,
        `a`.`postalCode`      AS `postalCode_adresse`,
        `a`.`country`         AS `country_adresse`
 from (((`commerce`.`utilisateur` `u` join `commerce`.`user_profile` `up`
-        on ((`u`.`idUserProfil` = `up`.`id`))) join `commerce`.`useradresse` `ua`
-       on ((`u`.`id` = `ua`.`idUser`))) join `commerce`.`adresse` `a` on ((`ua`.`idAdresse` = `a`.`id`)));
+    on ((`u`.`idUserProfil` = `up`.`id`))) join `commerce`.`useradresse` `ua`
+    on ((`u`.`id` = `ua`.`idUser`))) join `commerce`.`adresse` `a` on ((`ua`.`idAdresse` = `a`.`id`)));
 

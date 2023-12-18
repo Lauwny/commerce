@@ -4,63 +4,120 @@ namespace App\Controllers;
 
 use App\Models\UserProfileModel;
 use App\Models\UtilisateurModel;
-use CodeIgniter\Controller;
+use CodeIgniter\RESTful\ResourceController;
+use Helpers\JWTHandler\JwtHandler;
+use Helpers\RestResponse\RestResponse;
 
-class RegistrationController extends BaseController
+class RegistrationController extends ResourceController
 {
-    //user id login password mail idUserProfil createdAt modifiedAt lastLogin
-    //user profile 	id	name	firstname	birthdate	sexe	profilePicPath	idAdress	createdAt	modifiedAt
-
     private UtilisateurModel $userModel;
     private UserProfileModel $userProfileModel;
 
-    private UtilisateurModel $userRoleModel;
+    protected $token;
 
     public function createUser()
     {
-        $this->logger("info", "RegistrationController::createUser initialized");
+        $this->logger->info("RegistrationController::createUser initialized");
 
         $this->userModel = new UtilisateurModel();
 
-        $username = $this->request->getPost('username');
-        $mail = $this->request->getPost('mail');
-        $password = $this->request->getPost('password');
-        $name = $this->request->getPost('name');
-        $firstname = $this->request->getPost('firstname');
+        $requestData = $this->request->getJSON();
+        $username = htmlspecialchars($requestData->username);
+        $mail = htmlspecialchars($requestData->mail);
+        $password = $requestData->password;
+        $name = htmlspecialchars($requestData->name);
+        $firstname = htmlspecialchars($requestData->firstname);
 
-        if (!empty($username) || !empty($mail) || !empty($password)) {
-            // 1. Hash the password
-            $hashedPassword = hash('sha256', $password);
-
-            // 2. Check if username or mail is available
-            $existingChecker = $this->isUsernameOrMailAvailable($username, $mail);
-
-
-            //3. If both mail and username are available,
-            //proceed with user creation and call the insert method of UtilisateurModel
-            if (!$existingChecker == 0) {
-                $userData = [
-                    'login' => $username,
-                    'password' => $hashedPassword,
-                    'mail' => $mail,
-                    'createdAt' => date('Y-m-d H:i:s'),
-                ];
-                $this->userModel->createNewUser($userData);
-                $lastUserId = $this->userModel->insertID();
-
-                $userFileDatas = [
-                    'idUser' => $lastUserId,
-                    'name' => $name,
-                    'firstname' => $firstname,
-                    'createdAt' => date('Y-m-d H:i:s'),
-                ];
-                if(intval($this->createUserFile($userFileDatas) > 0)){
-                    session()->set('userId', $lastUserId);
-                    session()->set('loggedIn', true);
-                    return redirect()->to('/testlog');
-                }
-            }
+        if (empty($username) || empty($mail) || empty($password)) {
+            $restResponse = new RestResponse([
+                "code" => "invalid_request",
+                "message" => "Username, mail, and password are required fields",
+                "data" => ""
+            ]);
+            return $this->respond(json_decode($restResponse->build()), 400);
         }
+
+        // 1. Hash the password
+        $hashedPassword = hash('sha256', $password);
+
+// 2. Check if username or mail is available
+        $existingChecker = $this->isUsernameOrMailAvailable($username, $mail);
+
+        // 3. If either mail or username is not available, return appropriate response
+        switch ($existingChecker) {
+            case 0:
+                $code = "username_and_mail_taken";
+                $message = "Username and mail are already taken";
+                break;
+            case 1:
+                $code = "mail_taken";
+                $message = "Mail is already taken";
+                break;
+            case 2:
+                $code = "username_taken";
+                $message = "Username is already taken";
+                break;
+            case 3:
+                // No conflict
+                break;
+            default:
+                $code = "unknown_error";
+                $message = "An unknown error occurred";
+                break;
+        }
+
+        // Return response if conflict
+        if (isset($code)) {
+            $restResponse = new RestResponse([
+                "code" => $code,
+                "message" => $message,
+                "data" => ""
+            ]);
+            return $this->respond(json_decode($restResponse->build()), 409);
+        }
+
+        // 4. Proceed with user creation
+        $userData = [
+            'login' => $username,
+            'password' => $hashedPassword,
+            'mail' => $mail,
+            'createdAt' => date('Y-m-d H:i:s'),
+        ];
+
+        if ($this->userModel->createNewUser($userData)) {
+            $lastUserId = $this->userModel->insertID();
+
+            $userFileDatas = [
+                'idUser' => $lastUserId,
+                'name' => $name,
+                'firstname' => $firstname,
+                'createdAt' => date('Y-m-d H:i:s'),
+            ];
+
+            // 5. Create user profile
+            if (intval($this->createUserFile($userFileDatas) > 0)) {
+                $this->logger->info("User $username profile created.");
+                $this->logger->info("User $username created.");
+                $restResponse = new RestResponse([
+                    "code" => "user_created_successful",
+                    "message" => "The user and profile have been created successfully",
+                    "data" => ""
+                ]);
+                return $this->respond(json_decode($restResponse->build()), 200);
+            } else {
+                $this->logger->error("User $username profile not created.");
+            }
+        } else {
+            $this->logger->error("User $username not created.");
+        }
+
+        // Return error response if any step fails
+        $restResponse = new RestResponse([
+            "code" => "user_creation_error",
+            "message" => "An error occurred during user creation",
+            "data" => ""
+        ]);
+        return $this->respond(json_decode($restResponse->build()), 404);
     }
 
     public function createUserFile($userDatas = [])
@@ -77,13 +134,6 @@ class RegistrationController extends BaseController
         // Check if the username and mail are available in the database
         $existingMail = $this->userModel->where('mail', $mail)->first();
         $existingUser = $this->userModel->where('login', $username)->first();
-        /*
-        Return values:
-        0 - Both mail and username are available
-        1 - Mail is not available
-        2 - Username is not available
-        3 - Both mail and username are not available
-        */
         if ($existingMail && $existingUser) {
             return 0;
         } elseif ($existingMail) {

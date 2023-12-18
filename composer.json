@@ -51,7 +51,9 @@
     "autoload": {
         "psr-4": {
             "CodeIgniter\\": "system/",
-            "Helpers\\": "app/Helpers"
+            "Helpers\\": "app/Helpers",
+            "Helpers\\JWTHandler\\": "app/Helpers/JWTHandler",
+            "Helpers\\RestResponse\\": "app/Helpers/RestResponse"
         },
         "exclude-from-classmap": [
             "**/Database/Migrations/**"

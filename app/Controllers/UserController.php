@@ -16,6 +16,11 @@ class UserController extends BaseController
 
     public function index(): string
     {
+        $listOfUser = $this->userModel->findAll();
+
+        foreach($listOfUser as $unUser){
+            echo $unUser->login;
+        }
         return view('welcome_message');
     }
 }

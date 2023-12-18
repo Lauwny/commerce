@@ -36,6 +36,6 @@ class UtilisateurModel extends Model
     }
     public function createNewUser($userDatas){
         $this->logger("info", "UtilisateurModel::createNewUser init");
-        parent::insert($userDatas);
+        return parent::insert($userDatas, false);
     }
 }
