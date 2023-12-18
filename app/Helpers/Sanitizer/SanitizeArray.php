@@ -12,11 +12,15 @@ class SanitizeArray
                 if (is_array($value) || is_object($value)) {
                     $value = SanitizeArray::sanitizeObject($value);
                 } else {
-                    $object->$key = esc($value);
+                    $sanitizedValue = esc($value);
+                    if (!empty($sanitizedValue)) {
+                        $object->$key = $sanitizedValue;
+                    } else {
+                        unset($object->$key);
+                    }
                 }
             }
         }
-
         return $object;
     }
 }

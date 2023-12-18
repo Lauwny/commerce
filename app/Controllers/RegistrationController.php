@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\AdresseModel;
+use App\Models\UserAdresseModel;
 use App\Models\UserProfileModel;
 use App\Models\UtilisateurModel;
 use CodeIgniter\RESTful\ResourceController;
@@ -39,7 +41,7 @@ class RegistrationController extends ResourceController
         // 1. Hash the password
         $hashedPassword = hash('sha256', $password);
 
-// 2. Check if username or mail is available
+        // 2. Check if username or mail is available
         $existingChecker = $this->isUsernameOrMailAvailable($username, $mail);
 
         // 3. If either mail or username is not available, return appropriate response
@@ -97,12 +99,17 @@ class RegistrationController extends ResourceController
             if (intval($this->createUserFile($userFileDatas) > 0)) {
                 $this->logger->info("User $username profile created.");
                 $this->logger->info("User $username created.");
-                $restResponse = new RestResponse([
-                    "code" => "user_created_successful",
-                    "message" => "The user and profile have been created successfully",
-                    "data" => ""
-                ]);
-                return $this->respond(json_decode($restResponse->build()), 200);
+                $isUserAdresseCreated = $this->createUserAdresse($lastUserId);
+                if($isUserAdresseCreated){
+                    $restResponse = new RestResponse([
+                        "code" => "user_created_successful",
+                        "message" => "The user and profile have been created successfully",
+                        "data" => ""
+                    ]);
+                    return $this->respond(json_decode($restResponse->build()), 200);
+                }else{
+                    $this->logger->error("User adresse for user $username not created.");
+                }
             } else {
                 $this->logger->error("User $username profile not created.");
             }
@@ -126,6 +133,29 @@ class RegistrationController extends ResourceController
         $this->userProfileModel = new UserProfileModel();
 
         return $this->userProfileModel->createNewUserProfile($userDatas);
+    }
+
+    public function createUserAdresse($userId){
+        $this->logger("info", "RegistrationController::createUserAdresse initialized");
+        $adresseModel = new AdresseModel();
+        $userAdresseModel = new UserAdresseModel();
+        $adresseInfo = [""];
+        $isAdresseInserted = $adresseModel->insert(['number'=>'0']);
+        if($isAdresseInserted){
+            $newAdresseId = $adresseModel->getInsertID();
+            if($newAdresseId > 0){
+                $isInsertedAdresseUser = $userAdresseModel->insert([
+                    "idUser"=>$userId,
+                    "idAdresse"=>$newAdresseId,
+                    "adresse_name"=>"Adresse 1"
+                ]);
+                if($isInsertedAdresseUser){
+                    return 1;
+                }
+            }
+            return 0;
+        }
+        return 0;
     }
 
     private function isUsernameOrMailAvailable($username, $mail)
